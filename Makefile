@@ -6,7 +6,9 @@ FILES = \
   js/reveal.js \
   lib/js/head.min.js \
   css/reveal.css \
-  css/theme/night.css \
+  css/theme/template/mixins.scss \
+  css/theme/template/settings.scss \
+  css/theme/template/theme.scss \
   plugin/notes/notes.html \
   plugin/notes/notes.js
 
@@ -16,6 +18,7 @@ prepare:
 	done
 
 build:
+	@docker run --rm -v $(CURDIR):/workspace -w /workspace jbergknoff/sass /workspace/theme.scss /workspace/build/theme.css
 	@docker build -t harmish/hfr2016 .
 
 run:

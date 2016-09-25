@@ -1,0 +1,20 @@
+// default mixins and settings -----------------
+@import "dist/reveal/css/theme/template/mixins";
+@import "dist/reveal/css/theme/template/settings";
+
+// override theme settings
+$backgroundColor: #111;
+
+$mainFont: 'Segoe UI', sans-serif;
+$linkColor: #e7ad52;
+$linkColorHover: lighten( $linkColor, 20% );
+$headingFont: 'Segoe UI Bold', sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.03em;
+$headingTextTransform: none;
+$selectionBackgroundColor: #e7ad52;
+$mainFontSize: 30px;
+
+
+// theme template ------------------------------
+@import "dist/reveal/css/theme/template/theme";
