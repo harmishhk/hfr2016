@@ -9,6 +9,8 @@ FILES = \
   css/theme/template/mixins.scss \
   css/theme/template/settings.scss \
   css/theme/template/theme.scss \
+  plugin/markdown/marked.js \
+  plugin/markdown/markdown.js \
   plugin/notes/notes.html \
   plugin/notes/notes.js
 

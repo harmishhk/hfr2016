@@ -23,14 +23,70 @@
   <div class="reveal">
     <div class="slides">
 
-
       <!--    heading slide    -->
+      <section data-markdown>
+        <script type="text/template">
+          ## Head-Body Motion Coordination for Human Aware Robot Navigation
+          <br/>
+          Harmish Khambhaita (LAAS-CNRS) <br/>
+          Jorge Rios-Martinez (Universidad Autónoma de Yucatán) <br/>
+          Rachid Alami (LAAS-CNRS)
+        </script>
+      </section>
+
+      <!-- introduction to spencer robot and problem -->
+      <section data-background-video="media/start.mp4" data-background-video-muted>
+        <aside class="notes">
+          - Introduce SPENCER Robot <br/>
+          - Show that it could be confusing for humans when robot head is still (at ~20 seconds
+          into the video)
+        </aside>
+      </section>
+
+      <!-- Human-Aware Navigation -->
       <section>
-        <h2>Head-Body Motion Coordination for Human Aware Robot Navigation</h2>
-        </br>
-        Harmish Khambhaita (LAAS-CNRS) </br>
-        Jorge Rios-Martinez (Universidad Autónoma de Yucatán) </br>
-        Rachid Alami (LAAS-CNRS) </br>
+        <h3>Human-Aware Navigation is already ...</h3>
+        <div style="text-align:center">
+          <table>
+            <tr>
+              <td align="center" width="33.33%" style="padding: 0em">
+                Safe <br/>
+                <img data-src="media/safe.jpg" style="border:none; width: 100%;">
+              </td>
+              <td align="center" width="33.33%" style="padding: 0em" class="fragment">
+                Social <br/>
+                <img data-src="media/social.png" style="border:none; width: 100%;">
+              </td>
+              <td align="center" width="33.33%" style="padding: 0em" class="fragment">
+                Legible <br/>
+                <img data-src="media/legible.svg" style="border:none; width: 100%;">
+              </td>
+            </tr>
+          </table>
+        </div>
+        <aside class="notes">
+        </aside>
+      </section>
+
+      <!-- last video of spencer in schiphol -->
+      <section data-background-video="media/end.mp4" data-background-video-muted>
+        <aside class="notes">
+        </aside>
+      </section>
+
+      <!-- thanks -->
+      <section>
+        <h3>Thank You!</h3>
+        <table width="60%">
+            <tr>
+              <td align="center" width="33.33%" style="padding: 0em">
+                <img data-src="media/pepper.jpg" style="border:none; width: 100%;">
+              </td>
+              <td align="center" width="66.66%" style="padding: 0em; vertical-align: middle">
+                <img data-src="media/mummer.jpg" style="border:none; width: 100%;">
+              </td>
+            </tr>
+          </table>
       </section>
     </div>
   </div>
@@ -40,9 +96,12 @@
 
   <script>
 			Reveal.initialize({
-				history: true,
+        controls: true, // Display controls in the bottom right corner
+				history: true, // Push each slide change to the browser history
 
 				dependencies: [
+          { src: 'dist/reveal/plugin/markdown/marked.js' },
+					{ src: 'dist/reveal/plugin/markdown/markdown.js' },
 					{ src: 'dist/reveal/plugin/notes/notes.js', async: true }
 				]
 			});
