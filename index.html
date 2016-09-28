@@ -35,11 +35,13 @@
       </section>
 
       <!-- introduction to spencer robot and problem -->
-      <section data-background-video="media/start.mp4" data-background-video-muted>
+      <section>
+        <video class="stretch" src="media/start.mp4" type="video/mp4" autoplay controls muted></video>
         <aside class="notes">
-          - Introduce SPENCER Robot <br/>
-          - Show that it could be confusing for humans when robot head is still (at ~20 seconds
-          into the video)
+          <ul>
+            <li>Introduce SPENCER Robot</li>
+            <li>Show that it could be confusing for humans when robot head is still (at ~20 seconds into the video)</li>
+          </ul>
         </aside>
       </section>
 
@@ -49,15 +51,15 @@
         <div style="text-align:center">
           <table>
             <tr>
-              <td align="center" width="33.33%" style="padding: 0em">
+              <td align="center" width="33.33%" style="padding: 0em;">
                 Safe <br/>
                 <img data-src="media/safe.jpg" style="border:none; width: 100%;">
               </td>
-              <td align="center" width="33.33%" style="padding: 0em" class="fragment">
+              <td class="fragment" align="center" width="33.33%" style="padding: 0em;">
                 Social <br/>
                 <img data-src="media/social.png" style="border:none; width: 100%;">
               </td>
-              <td align="center" width="33.33%" style="padding: 0em" class="fragment">
+              <td class="fragment" align="center" width="33.33%" style="padding: 0em;">
                 Legible <br/>
                 <img data-src="media/legible.svg" style="border:none; width: 100%;">
               </td>
@@ -68,8 +70,116 @@
         </aside>
       </section>
 
+      <!-- gaze is the key -->
+      <section>
+        <blockquote>
+          <h4>
+            &ldquo;Even in the absence of any overtly executed action, observers can still read other people’s motor intentions, provided
+            they can see a model’s face, in particular his or her gaze direction.&rdquo;
+          </h4>
+        </blockquote>
+        <div style="text-align: right;">
+          Castiello (2003)
+        </div>
+      </section>
+
+      <!-- scenario -->
+      <section>
+        <h3>Human-Robot Path Crossing Scenario</h3>
+        <table>
+          <tr>
+            <td align="center" width="45%" style="padding: 0em; border:none;">
+              <img data-src="media/seq_1.png" style="border:none; width: 100%;">
+            </td>
+            <td class="fragment" data-fragment-index="1" align="center" width="10%" style="padding: 0em; border:none; vertical-align:middle;">
+              ⇨
+            </td>
+            <td class="fragment" data-fragment-index="1" align="center" width="45%" style="padding: 0em; border:none;">
+              <img data-src="media/seq_2.png" style="border:none; width: 100%;">
+            </td>
+          </tr>
+          <tr>
+            <td align="center" width="45%" style="padding: 0em; border:none;">
+            </td>
+            <td align="center" width="10%" style="padding: 0em; border:none;">
+            </td>
+            <td class="fragment" data-fragment-index="2" align="center" width="45%" style="padding: 0em; border:none;">
+              ⇩
+            </td>
+          </tr>
+          <tr>
+            <td class="fragment" data-fragment-index="3" align="center" width="45%" style="padding: 0em;">
+              <img data-src="media/seq_3.png" style="border:none; width: 100%;">
+            </td>
+            <td class="fragment" data-fragment-index="3" align="center" width="10%" style="padding: 0em; border:none; vertical-align:middle;">
+              ⇦
+            </td>
+            <td class="fragment" data-fragment-index="2" align="center" width="45%" style="padding: 0em;">
+              <img data-src="media/seq_4.png" style="border:none; width: 100%;">
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- gaze control parameters -->
+      <section>
+        <h3>Essential gaze control parameters</h3>
+        <ul>
+          <li>Head anticipates body</li>
+          <ul>
+            <li>with gaze shifting 500 to 700 milliseconds in advance to the body</li>
+            <li>increasing angle for gaze anticipation with curvature</li>
+          </ul>
+          <li>Pedestrians fixate their gaze on</li>
+          <ul>
+            <li>other pedestrians when necessary for collision avoidance (with average distance of ~4m)</li>
+            <li>static obstacles</li>
+          </ul>
+          <li>Prominent objective in current <i>social context</i> affords gaze</li>
+          <ul>
+            <li>Communicating Social Attention</li>
+            <li>Manifesting an Interaction</li>
+            <li>Projecting Mental State</li>
+            <li>Establishing Agency</li>
+          </ul>
+        </ul>
+      </section>
+
+      <!-- framework and behavioral functions -->
+      <section>
+        <h3>Framework</h3>
+        TODO: add info about MCDM
+        <h3>Behavioral functions</h3>
+        TODO: add functiona and angles image
+      </section>
+
+      <!-- architecture -->
+      <section>
+        <h3>Architecture of head behavior scheme</h3>
+        <img class="stretch" data-src="media/architecture.svg" style="border:none;">
+      </section>
+
+      <!-- result video -->
+      <section>
+      </section>
+
+      <!-- user-study setup -->
+      <section>
+        <h3>User-study setup</h3>
+        TODO: add user study images
+      </section>
+
+      <!-- user study questions -->
+      <section>
+      </section>
+
+      <!-- user study results -->
+      <section>
+      </section>
+
       <!-- last video of spencer in schiphol -->
-      <section data-background-video="media/end.mp4" data-background-video-muted>
+      <section>
+        <video class="stretch" src="media/end.mp4" type="video/mp4" autoplay controls muted></video>
         <aside class="notes">
         </aside>
       </section>
@@ -78,15 +188,15 @@
       <section>
         <h3>Thank You!</h3>
         <table width="60%">
-            <tr>
-              <td align="center" width="33.33%" style="padding: 0em">
-                <img data-src="media/pepper.jpg" style="border:none; width: 100%;">
-              </td>
-              <td align="center" width="66.66%" style="padding: 0em; vertical-align: middle">
-                <img data-src="media/mummer.jpg" style="border:none; width: 100%;">
-              </td>
-            </tr>
-          </table>
+          <tr>
+            <td align="center" width="33.33%" style="padding: 0em">
+              <img data-src="media/pepper.jpg" style="border:none; width: 100%;">
+            </td>
+            <td align="center" width="66.66%" style="padding: 0em; vertical-align: middle">
+              <img data-src="media/mummer.jpg" style="border:none; width: 100%;">
+            </td>
+          </tr>
+        </table>
       </section>
     </div>
   </div>
@@ -98,6 +208,7 @@
 			Reveal.initialize({
         controls: true, // Display controls in the bottom right corner
 				history: true, // Push each slide change to the browser history
+        margin: 0.01, // minimal boarders
 
 				dependencies: [
           { src: 'dist/reveal/plugin/markdown/marked.js' },
