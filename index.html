@@ -36,7 +36,7 @@
 
       <!-- introduction to spencer robot and problem -->
       <section>
-        <video class="stretch" src="media/start.mp4" type="video/mp4" autoplay controls muted></video>
+        <video class="stretch" src="media/start.mp4" type="video/mp4" controls muted></video>
         <aside class="notes">
           <ul>
             <li>Introduce SPENCER Robot</li>
@@ -174,7 +174,7 @@
             <li>by shifting the gaze 500 to 700 milliseconds in advance compared to the body. <small style="vertical-align: middle;">(Bernardin et al. 2012)</small></li>
             <li>by increasing gaze angle with path curvature. <small style="vertical-align: middle;">(Unhelkar et al. 2015)</small></li>
           </ul>
-          <li>Pedestrians ogten fixate their gaze <small style="vertical-align: middle;">(Kitazawa and Fujiyama 2010)</small></li>
+          <li>Pedestrians often fixate their gaze <small style="vertical-align: middle;">(Kitazawa and Fujiyama 2010)</small></li>
           <ul>
             <li>on other pedestrians when necessary for collision avoidance (with average distance of ~4m)</li>
             <li>on static obstacles</li>
@@ -207,8 +207,8 @@
           <li>Best alsternative is choosen by evaluating each alternative against a set of criteria (objectives in current social
             context).
           </li>
-          <li>Specialized <i>behavioral functions</i> to select gazing points from each source</li>
-          <li>Selecting final gazing point with paired comparison of involved criteria (AHP)</li>
+          <li>Specialized <i>behavioral functions</i> to select gazing points from each source.</li>
+          <li>Selecting final gazing point with paired comparison of involved criteria (AHP).</li>
         </ul>
         <aside class="notes">
           <ul>
@@ -233,13 +233,13 @@
             <ul>
               <li><i>look-at-path</i></li>
               <ul>
-                <li>Using output trajectory from the localplanning module.</li>
+                <li>Using output trajectory from the local-planning module.</li>
                 <li>Limiting gaze angle to remain within GMA.</li>
               </ul>
               <li><i>glance-at-human</i></li>
               <ul>
                 <li>Favoring the human that requires the most urgent attention.</li>
-                <li>Keeps track of already looked-at humans to avoid triggering multiple saccade behaviors</li>
+                <li>Keeps track of already looked-at humans to avoid triggering multiple saccade behaviors.</li>
               </ul>
             </ul>
           </ul>
@@ -267,7 +267,7 @@
 
       <!-- result video -->
       <section>
-        <video class="stretch" src="media/result.mp4" type="video/mp4" autoplay controls muted></video>
+        <video class="stretch" src="media/result.mp4" type="video/mp4" controls muted></video>
         <aside class="notes">
           <ul>
             <li>biggest challange was synchronizattion</li>
@@ -305,7 +305,11 @@
         </table>
         <aside class="notes">
           <ul>
-            <li>1</li>
+            <li>area of about 5.5 by 9 m</li>
+            <li>no human involved in this video</li>
+            <li>explain marked positions</li>
+            <li>online questionnaire, questions directly after video</li>
+            <li>goal one of the two positions</li>
           </ul>
         </aside>
       </section>
@@ -347,7 +351,14 @@
         </table>
         <aside class="notes">
           <ul>
-            <li>1</li>
+            <li>three videos recorded</li>
+            <li>questions on likert scale strongly disagree (= 1) to strongly agree (= 5)</li>
+            <li>questions corresponds to social presence measure</li>
+            <li>becasue of third person study only selected 4 measures of 6, removed affective and emotional aspects</li>
+            <li>co-presence (Q1)</li>
+            <li>perceived message understanding (Q2)</li>
+            <li>perceived behavioral interdependence (Q3)</li>
+            <li>and attentional allocation (Q4)</li>
           </ul>
         </aside>
       </section>
@@ -372,14 +383,35 @@
         </ul>
         <aside class="notes">
           <ul>
-            <li>1</li>
+            <li>67 choose to answer in English, 36 in French, 20 in Spanish and 3 in German</li>
+            <li>H1: increased ratio of participants who answered correctly</li>
+            <li>given amount of time, the look-at-path behavior results in a more accurate prediction</li>
+            <li>confirmed without look-at-path results are same as expected due to chance</li>
+            <li>H2: Friedman rank sum test reveals signiﬁcant differences</li>
+            <li>Wilcoxon signed rank test showing C is preffered over both other</li>
+            <li>co-presence significantly improved</li>
+            <li>increse in percived attention, note negative nature of Q4</li>
+            <li>Perceived message understanding measure hints at overall enhancement in ﬂuency of interactino</li>
+            <li>limitations: video-based study, generalizability</li>
           </ul>
         </aside>
       </section>
 
-      <!-- last video of spencer in schiphol -->
       <section>
-        <video class="stretch" src="media/end.mp4" type="video/mp4" autoplay controls muted></video>
+        <h3>Future work</h3>
+        <ul>
+          <li>Explore and test other behavioral functions.</li>
+          <li>Dynamically adapting the criteria weight vector.</li>
+          <li>Comprehensive first-person user-study.</li>
+          <li>User-study with placebo behavior (for example robot looking at random points).</li>
+        </ul>
+        <aside class="notes">
+          <ul>
+            <li>e.g. robot acknowledging a group of people, showing certain emotions while navigating, and functions that explicitly
+              take affordances of the environment into account</li>
+            <li>Machine learing for weight vector adaptation</li>
+          </ul>
+        </aside>
       </section>
 
       <!-- thanks -->
@@ -395,6 +427,10 @@
             </td>
           </tr>
         </table>
+      </section>
+
+      <!-- last video of spencer in schiphol -->
+      <section data-background-video="media/end.mp4" data-background-video-loop data-background-video-muted>
       </section>
     </div>
   </div>
