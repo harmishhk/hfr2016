@@ -54,14 +54,29 @@
               <td align="center" width="33.33%" style="padding: 0em;">
                 Safe <br/>
                 <img data-src="media/safe.jpg" style="border:none; width: 100%;">
+                <div align="right">
+                  <small>
+                    (Sisbot et al. 2007)&nbsp;
+                  </small>
+                </div>
               </td>
               <td class="fragment" align="center" width="33.33%" style="padding: 0em;">
                 Social <br/>
                 <img data-src="media/social.png" style="border:none; width: 100%;">
+                <div align="right">
+                  <small>
+                    (Rios-Martinez et al. 2011)&nbsp;
+                  </small>
+                </div>
               </td>
               <td class="fragment" align="center" width="33.33%" style="padding: 0em;">
                 Legible <br/>
                 <img data-src="media/legible.svg" style="border:none; width: 100%;">
+                <div align="right">
+                  <small>
+                    (Kruse et al. 2014)&nbsp;
+                  </small>
+                </div>
               </td>
             </tr>
           </table>
@@ -78,9 +93,30 @@
             they can see a model’s face, in particular his or her gaze direction.&rdquo;
           </h4>
         </blockquote>
-        <div style="text-align: right;">
-          Castiello (2003)
+        <div align="right" style="padding-right: 15%;">
+          <small>
+            Castiello (2003)&nbsp;
+          </small>
         </div>
+        <br/>
+        <p class="fragment">HRI studis are strongly skewed towards static situations!?</p>
+        <aside class="notes">
+          <ul>
+            <li>gaze is important</li>
+            <li>gaze is already used for</li>
+            <ul>
+              <li>capture attention</li>
+              <li>communicate attentiveness and visual awareness</li>
+              <li>manifest forethought to improve readability</li>
+            </ul>
+            <li>only ad-hoc solutions for dynamic cases</li>
+            <ul>
+              <li>fix angle for indication</li>
+              <li>fixation of human for cetain amount of time and then look back in front</li>
+            </ul>
+            <li>synchronization is hard</li>
+          </ul>
+        </aside>
       </section>
 
       <!-- scenario -->
@@ -109,16 +145,24 @@
           </tr>
           <tr>
             <td class="fragment" data-fragment-index="3" align="center" width="45%" style="padding: 0em;">
-              <img data-src="media/seq_3.png" style="border:none; width: 100%;">
+              <img data-src="media/seq_4.png" style="border:none; width: 100%;">
             </td>
             <td class="fragment" data-fragment-index="3" align="center" width="10%" style="padding: 0em; border:none; vertical-align:middle;">
               ⇦
             </td>
             <td class="fragment" data-fragment-index="2" align="center" width="45%" style="padding: 0em;">
-              <img data-src="media/seq_4.png" style="border:none; width: 100%;">
+              <img data-src="media/seq_3.png" style="border:none; width: 100%;">
             </td>
           </tr>
         </table>
+        <aside class="notes">
+          <ul>
+            <li>robot starts looking at path</li>
+            <li>human enters, robot detects possible interference, robot turns its head</li>
+            <li>after acknowledging, robot looks back at path and slows down at the same time</li>
+            <li>human passes in front of the robot, interaction episode ends</li>
+          </ul>
+        </aside>
       </section>
 
       <!-- gaze control parameters -->
@@ -127,15 +171,15 @@
         <ul>
           <li>Head anticipates body</li>
           <ul>
-            <li>with gaze shifting 500 to 700 milliseconds in advance to the body</li>
-            <li>increasing angle for gaze anticipation with curvature</li>
+            <li>by shifting the gaze 500 to 700 milliseconds in advance compared to the body. <small style="vertical-align: middle;">(Bernardin et al. 2012)</small></li>
+            <li>by increasing gaze angle with path curvature. <small style="vertical-align: middle;">(Unhelkar et al. 2015)</small></li>
           </ul>
-          <li>Pedestrians fixate their gaze on</li>
+          <li>Pedestrians ogten fixate their gaze <small style="vertical-align: middle;">(Kitazawa and Fujiyama 2010)</small></li>
           <ul>
-            <li>other pedestrians when necessary for collision avoidance (with average distance of ~4m)</li>
-            <li>static obstacles</li>
+            <li>on other pedestrians when necessary for collision avoidance (with average distance of ~4m)</li>
+            <li>on static obstacles</li>
           </ul>
-          <li>Prominent objective in current <i>social context</i> affords gaze</li>
+          <li>Selection of gazing point depends on prominent objective in current <i>social context</i> <small style="vertical-align: middle;">(Srinivasan et al. 2015)</small></li>
           <ul>
             <li>Communicating Social Attention</li>
             <li>Manifesting an Interaction</li>
@@ -143,45 +187,199 @@
             <li>Establishing Agency</li>
           </ul>
         </ul>
+        <aside class="notes">
+          <ul>
+            <li>also head control is initiated several meters before the turn</li>
+            <li>body velocity is also statistically important</li>
+            <li>kitazawa: study in wide hallway area</li>
+            <li>only 1.9 m for leading participant</li>
+            <li>with this: decision for switching the head direction becomes complex</li>
+            <li>in fact there are multiple competing objectives for gaze control so MCDM</li>
+          </ul>
+        </aside>
       </section>
 
       <!-- framework and behavioral functions -->
       <section>
-        <h3>Framework</h3>
-        TODO: add info about MCDM
-        <h3>Behavioral functions</h3>
-        TODO: add functiona and angles image
+        <h3>Robot head behavior: an MCDM problem</h3>
+        <ul>
+          <li>Distinctive choices for gazing points originating from multiple sources.</li>
+          <li>Best alsternative is choosen by evaluating each alternative against a set of criteria (objectives in current social
+            context).
+          </li>
+          <li>Specialized <i>behavioral functions</i> to select gazing points from each source</li>
+          <li>Selecting final gazing point with paired comparison of involved criteria (AHP)</li>
+        </ul>
+        <aside class="notes">
+          <ul>
+            <li>think of robot having multiple choices to look at</li>
+            <ul>
+              <li>looking at where it is going</li>
+              <li>looking at object to act upon</li>
+              <li>simply moving head down to show emotion</li>
+            </ul>
+            <li>multiple choices come from each souce of information, e.g. selecting human to look at</li>
+            <li>importance/weight of criteria changes with social context</li>
+          </ul>
+        </aside>
       </section>
 
       <!-- architecture -->
       <section>
-        <h3>Architecture of head behavior scheme</h3>
-        <img class="stretch" data-src="media/architecture.svg" style="border:none;">
+        <h3>Head behavior scheme</h3>
+        <div style="text-align: left;">
+          <ul>
+            <li>Two functions for social navigation</li>
+            <ul>
+              <li><i>look-at-path</i></li>
+              <ul>
+                <li>Using output trajectory from the localplanning module.</li>
+                <li>Limiting gaze angle to remain within GMA.</li>
+              </ul>
+              <li><i>glance-at-human</i></li>
+              <ul>
+                <li>Favoring the human that requires the most urgent attention.</li>
+                <li>Keeps track of already looked-at humans to avoid triggering multiple saccade behaviors</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+        <table>
+          <tr>
+            <td align="center" width="45%" style="border:none; vertical-align: top;">
+              <img class="stretch" width="100%" data-src="media/architecture.svg" style="border:none;">
+            </td>
+            <td align="center" width="55%" style="border:none; vertical-align: top;">
+              <img class="stretch" width="100%" data-src="media/angles.svg" style="border:none;">
+            </td>
+          </tr>
+        </table>
+        <aside class="notes">
+          <ul>
+            <li>look-at-path corresponds to projecting mental state and establishing agency</li>
+            <li>both position and velocity are used for glace-at-human</li>
+            <li>establishing agency, communicating social attention and manifesting an interaction afford this glance-at-human</li>
+            <li>we use move-base and Kruse algorithm for local planning</li>
+            <li>optitrack to detect humans</li>
+            <li>human-z is fixed</li>
+          </ul>
       </section>
 
       <!-- result video -->
       <section>
+        <video class="stretch" src="media/result.mp4" type="video/mp4" autoplay controls muted></video>
+        <aside class="notes">
+          <ul>
+            <li>biggest challange was synchronizattion</li>
+          </ul>
+        </aside>
       </section>
 
-      <!-- user-study setup -->
+      <!-- user-study setup 1 -->
       <section>
         <h3>User-study setup</h3>
-        TODO: add user study images
+        <i>Hypothesis 1</i>: Anticipatory head movements during navigation will positively affect the perception of the robot’s
+        navigation intents.
+        <table>
+          <tr>
+            <td align="center" width="33%" style="border:none; vertical-align: top;">
+              <img class="stretch" width="100%" data-src="media/layout_1.svg" style="border:none;">
+            </td>
+            <td align="center" width="67%" style="border:none;">
+              <ul>
+                <li>Only manipulated the look-at-path behavioral condition.</li>
+                <li>Question: Where is the robot going?</li>
+                <table>
+                  <tr>
+                    <td align="center" width="50%" style="border:none; vertical-align: top;">
+                      <img class="stretch" width="100%" data-src="media/goal1.jpg" style="border:none;">
+                    </td>
+                    <td align="center" width="50%" style="border:none; vertical-align: top;">
+                      <img class="stretch" width="100%" data-src="media/goal2.jpg" style="border:none;">
+                    </td>
+                  </tr>
+                </table>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <aside class="notes">
+          <ul>
+            <li>1</li>
+          </ul>
+        </aside>
       </section>
 
-      <!-- user study questions -->
+      <!-- user study setup 2 -->
       <section>
+        <h3>User-study setup</h3>
+        <div aligh="left">
+          <i>Hypothesis 2</i>: Behavior with both <i>look-at-path</i> and <i>glance-at-human</i> functions will be evaluated
+          as more favorable over no head movements.
+        </div>
+        <table>
+          <tr>
+            <td align="center" width="33%" style="border:none; vertical-align: top;">
+              <img class="stretch" width="100%" data-src="media/layout_2.svg" style="border:none;">
+            </td>
+            <td align="center" width="67%" style="border:none;">
+              <ul>
+                <li>Manipulated both the <i>look-at-path</i> and <i>glance-at-human</i> behavioral conditions.</li>
+                <div style="font-size:0.85em">
+                  <ul>
+                    <li>(A) All of the head-behavior functions disabled.</li>
+                    <li>(B) Only the look-at-path function enabled.</li>
+                    <li>(C) Both the look-at-path and gaze-at-human enabled.</li>
+                  </ul>
+                </div>
+                <li>Questions: <small style="vertical-align: middle;">(Harms and Biocca 2004)</small></li>
+                <ul>
+                  <div style="font-size:0.85em">
+                    <li>Q1: The robot noticed the person.</li>
+                    <li>Q2: Robot’s actions were clear for the person.</li>
+                    <li>Q3: Robot’s behavior was often in direct response to person’s behavior.</li>
+                    <li>Q4: Person did not receive robot’s attention.</li>
+                  </div>
+                </ul>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <aside class="notes">
+          <ul>
+            <li>1</li>
+          </ul>
+        </aside>
       </section>
 
       <!-- user study results -->
       <section>
+        <h3>User-study results</h3>
+        <ul>
+          <li>Collected data from 126 participants between age 17 and 59 (mean = 27.82, sd = 6.44) in 4 languages.</li>
+          <li>Support for <i>Hypothesis 1</i> concerning accuracy ( χ2(DF = 1,N = 126) = 50.704, p less than 0.0001).</li>
+          <li>We also found partial support for <i>Hypothesis 2</i>.</li>
+          <table>
+            <tr>
+              <td align="center" width="33%" style="border:none; vertical-align: middle;">
+                <img class="stretch" width="100%" data-src="media/result_h2.svg" style="border:none;">
+              </td>
+              <td align="center" width="67%" style="border:none; vertical-align: top;">
+                <img class="stretch" width="100%" data-src="media/result_h2q.svg" style="border:none;">
+              </td>
+            </tr>
+          </table>
+        </ul>
+        <aside class="notes">
+          <ul>
+            <li>1</li>
+          </ul>
+        </aside>
       </section>
 
       <!-- last video of spencer in schiphol -->
       <section>
         <video class="stretch" src="media/end.mp4" type="video/mp4" autoplay controls muted></video>
-        <aside class="notes">
-        </aside>
       </section>
 
       <!-- thanks -->
@@ -192,7 +390,7 @@
             <td align="center" width="33.33%" style="padding: 0em">
               <img data-src="media/pepper.jpg" style="border:none; width: 100%;">
             </td>
-            <td align="center" width="66.66%" style="padding: 0em; vertical-align: middle">
+            <td align="center" width="66.66%" style="padding: 0em; vertical-align: middle;">
               <img data-src="media/mummer.jpg" style="border:none; width: 100%;">
             </td>
           </tr>
@@ -206,9 +404,10 @@
 
   <script>
 			Reveal.initialize({
-        controls: true, // Display controls in the bottom right corner
+        controls: false, // Display controls in the bottom right corner
 				history: true, // Push each slide change to the browser history
-        margin: 0.01, // minimal boarders
+        margin: 0.05, // minimal boarders
+        transition: 'fade',
 
 				dependencies: [
           { src: 'dist/reveal/plugin/markdown/marked.js' },
