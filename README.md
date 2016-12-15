@@ -7,3 +7,9 @@ Prerequisites: [docker](https://www.docker.com/)
 ```
 make
 ```
+
+### Note:
+
+Videos are not pushed (using lfs) to github.</br>
+So to clone from github use ```GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/harmishhk/hfr2016.git```.</br>
+For pushing use ```git push origin master --no-verify```.
